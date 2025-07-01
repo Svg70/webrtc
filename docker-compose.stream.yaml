@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  dev-stream-aucburg:
+    container_name: dev-stream-aucburg
+    build:
+      context: ./aucburg-streaming/backend
+      dockerfile: Dockerfile
+    ports:
+      - "5002:5001/tcp"           # HTTP / WebSocket
+      - "40000-40010:40000-40010/udp"  # RTP/RTCP для WebRTC
+    networks:
+      - dev-aucburg-net
+
+networks:
+  dev-aucburg-net:
+    external: true

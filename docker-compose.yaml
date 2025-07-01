@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: streaming-postgres
+    environment:
+      POSTGRES_USER: auction
+      POSTGRES_PASSWORD: auction
+      POSTGRES_DB: auction2
+    ports:
+      - "1500:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    networks:
+      - streaming-net
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:21.1.1
+    container_name: streaming-keycloak
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_DB: h2
+      KC_HOSTNAME_STRICT: "false"
+    command: ["start-dev"]
+    ports:
+      - "8080:8080"
+    networks:
+      - streaming-net
+
+  streaming-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: streaming-backend
+    env_file:
+      - .env
+    ports:
+      - "5001:5001"
+    depends_on:
+      - postgres
+      - keycloak
+    networks:
+      - streaming-net
+
+volumes:
+  pg_data:
+
+networks:
+  streaming-net:
+    driver: bridge

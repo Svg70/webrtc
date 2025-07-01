@@ -1,0 +1,442 @@
+{
+  "project_type": "NestJS",
+  "root": "/mnt/c/Users/alex-dev/Documents/DEV/aucburg-streaming/backend/",
+  "root_files": [
+    ".dockerignore",
+    ".env",
+    ".env.dev",
+    ".env.local",
+    ".env.local-dev",
+    ".env.prod",
+    ".eslintrc.js",
+    ".gitignore",
+    ".prettierrc",
+    "Dockerfile",
+    "Dockerfile-2",
+    "README.md",
+    "docker-compose.bidding.yaml",
+    "docker-compose.yaml",
+    "mediasoup-worker-3.15.8-linux-x64-kernel6.tgz",
+    "mediasoup-worker.tgz",
+    "nest-cli.json",
+    "nginx.conf",
+    "nginx.dev.conf",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.build.json",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "dependencies": {
+    "@nestjs/axios": "^3.0.1",
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/config": "^3.1.1",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/jwt": "^10.1.1",
+    "@nestjs/mongoose": "^10.0.1",
+    "@nestjs/passport": "^10.0.2",
+    "@nestjs/platform-express": "^10.0.0",
+    "@nestjs/platform-socket.io": "^10.3.0",
+    "@nestjs/swagger": "^7.1.11",
+    "@nestjs/typeorm": "^11.0.0",
+    "@nestjs/websockets": "^10.3.0",
+    "axios": "^1.6.5",
+    "bcrypt": "^5.1.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express-basic-auth": "^1.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "jwks-rsa": "^3.2.0",
+    "mediasoup": "3.15.8",
+    "mongoose": "^7.5.1",
+    "nest-keycloak-connect": "^1.10.1",
+    "nest-winston": "^1.9.4",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "pg": "^8.16.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "socket.io": "^4.7.3",
+    "typeorm": "^0.3.24",
+    "winston": "^3.10.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.0.0",
+    "@nestjs/schematics": "^10.0.0",
+    "@nestjs/testing": "^10.0.0",
+    "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "@types/passport-jwt": "^3.0.10",
+    "@types/passport-local": "^1.0.36",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.5.0",
+    "prettier": "^3.0.0",
+    "source-map-support": "^0.5.21",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.4.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.3"
+  },
+  "workspaces": null,
+  "configs": {
+    "eslint": [
+      ".eslintrc.js"
+    ],
+    "prettier": [
+      ".prettierrc"
+    ],
+    "jest": null,
+    "ci": null
+  },
+  "summary": {
+    "total_files": 65,
+    "code_files": 42,
+    "test_files": 2,
+    "doc_files": 1
+  },
+  "src": {
+    "dirs": [
+      "chat",
+      "common",
+      "common/logger",
+      "common/mock",
+      "constants",
+      "decorators",
+      "guards",
+      "keycloak",
+      "mediasoup",
+      "mediasoup/interface",
+      "mediasoup/producer-consumer",
+      "mediasoup/room",
+      "mediasoup/transport",
+      "signaling",
+      "signaling/dto"
+    ],
+    "files": [
+      "app.controller.spec.ts",
+      "app.controller.ts",
+      "app.module.ts",
+      "app.service.ts",
+      "chat/chat.controller.ts",
+      "chat/chat.entity.ts",
+      "chat/chat.gateway.ts",
+      "chat/chat.module.ts",
+      "chat/chat.service.ts",
+      "common/logger/winston.util.ts",
+      "common/mock/mock.ts",
+      "constants/role.enum.ts",
+      "database-connection.service.ts",
+      "decorators/roles.decorator.ts",
+      "guards/Roles.guard.ts",
+      "keycloak/auth.keycloak.module.ts",
+      "keycloak/token-verification.service.ts",
+      "keycloak/user.decorator.ts",
+      "keycloak/wsuser.decorator.ts",
+      "main.ts",
+      "mediasoup/interface/media-resources.interfaces.ts",
+      "mediasoup/interface/user-resources.interfaces.ts",
+      "mediasoup/media.config.ts",
+      "mediasoup/mediasoup.module.ts",
+      "mediasoup/mediasoup.service.ts",
+      "mediasoup/producer-consumer/producer-consumer.interface.ts",
+      "mediasoup/producer-consumer/producer-consumer.module.ts",
+      "mediasoup/producer-consumer/producer-consumer.service.ts",
+      "mediasoup/room/peer.interface.ts",
+      "mediasoup/room/room.interface.ts",
+      "mediasoup/room/room.module.ts",
+      "mediasoup/room/room.service.ts",
+      "mediasoup/transport/transport.interface.ts",
+      "mediasoup/transport/transport.module.ts",
+      "mediasoup/transport/transport.service.ts",
+      "signaling/dto/join-channel.dto.ts",
+      "signaling/dto/leave-channel.dts.ts",
+      "signaling/signaling.gateway.spec.ts",
+      "signaling/signaling.gateway.ts",
+      "signaling/signaling.module.ts"
+    ]
+  },
+  "file_metrics": {
+    ".eslintrc.js": {
+      "size_bytes": 787,
+      "lines": 31,
+      "last_modified": "2025-06-24T12:22:54.352345"
+    },
+    "docker-compose.bidding.yaml": {
+      "size_bytes": 298,
+      "lines": null,
+      "last_modified": "2025-06-24T12:22:54.355511"
+    },
+    "docker-compose.yaml": {
+      "size_bytes": 1038,
+      "lines": null,
+      "last_modified": "2025-06-24T12:22:54.355984"
+    },
+    "nest-cli.json": {
+      "size_bytes": 179,
+      "lines": 8,
+      "last_modified": "2025-06-24T12:22:54.378480"
+    },
+    "package-lock.json": {
+      "size_bytes": 438654,
+      "lines": 11469,
+      "last_modified": "2025-06-24T12:25:23.675820"
+    },
+    "package.json": {
+      "size_bytes": 3090,
+      "lines": 102,
+      "last_modified": "2025-06-24T12:22:54.384019"
+    },
+    "src/app.controller.spec.ts": {
+      "size_bytes": 639,
+      "lines": 22,
+      "last_modified": "2025-06-24T12:22:54.386985"
+    },
+    "src/app.controller.ts": {
+      "size_bytes": 286,
+      "lines": 12,
+      "last_modified": "2025-06-24T12:22:54.388020"
+    },
+    "src/app.module.ts": {
+      "size_bytes": 915,
+      "lines": 29,
+      "last_modified": "2025-06-24T12:25:23.677823"
+    },
+    "src/app.service.ts": {
+      "size_bytes": 150,
+      "lines": 8,
+      "last_modified": "2025-06-24T12:22:54.388984"
+    },
+    "src/chat/chat.controller.ts": {
+      "size_bytes": 534,
+      "lines": 16,
+      "last_modified": "2025-06-24T12:22:54.389992"
+    },
+    "src/chat/chat.entity.ts": {
+      "size_bytes": 377,
+      "lines": 17,
+      "last_modified": "2025-06-24T12:22:54.389992"
+    },
+    "src/chat/chat.gateway.ts": {
+      "size_bytes": 2542,
+      "lines": 87,
+      "last_modified": "2025-06-24T12:25:23.678817"
+    },
+    "src/chat/chat.module.ts": {
+      "size_bytes": 692,
+      "lines": 16,
+      "last_modified": "2025-06-24T12:22:54.390985"
+    },
+    "src/chat/chat.service.ts": {
+      "size_bytes": 592,
+      "lines": 22,
+      "last_modified": "2025-06-24T12:22:54.392106"
+    },
+    "src/common/logger/winston.util.ts": {
+      "size_bytes": 1235,
+      "lines": 41,
+      "last_modified": "2025-06-24T12:22:54.392985"
+    },
+    "src/common/mock/mock.ts": {
+      "size_bytes": 26,
+      "lines": 1,
+      "last_modified": "2025-06-24T12:22:54.392985"
+    },
+    "src/constants/role.enum.ts": {
+      "size_bytes": 61,
+      "lines": 4,
+      "last_modified": "2025-06-24T12:22:54.393985"
+    },
+    "src/database-connection.service.ts": {
+      "size_bytes": 733,
+      "lines": 21,
+      "last_modified": "2025-06-24T12:22:54.393985"
+    },
+    "src/decorators/roles.decorator.ts": {
+      "size_bytes": 207,
+      "lines": 5,
+      "last_modified": "2025-06-24T12:22:54.395261"
+    },
+    "src/guards/Roles.guard.ts": {
+      "size_bytes": 674,
+      "lines": 20,
+      "last_modified": "2025-06-24T12:22:54.395984"
+    },
+    "src/keycloak/auth.keycloak.module.ts": {
+      "size_bytes": 1197,
+      "lines": 41,
+      "last_modified": "2025-06-24T12:22:54.395984"
+    },
+    "src/keycloak/token-verification.service.ts": {
+      "size_bytes": 2789,
+      "lines": 85,
+      "last_modified": "2025-06-24T12:22:54.396985"
+    },
+    "src/keycloak/user.decorator.ts": {
+      "size_bytes": 452,
+      "lines": 16,
+      "last_modified": "2025-06-24T12:22:54.397985"
+    },
+    "src/keycloak/wsuser.decorator.ts": {
+      "size_bytes": 1001,
+      "lines": 27,
+      "last_modified": "2025-06-24T12:22:54.397985"
+    },
+    "src/main.ts": {
+      "size_bytes": 3801,
+      "lines": 129,
+      "last_modified": "2025-06-24T12:25:23.679824"
+    },
+    "src/mediasoup/interface/media-resources.interfaces.ts": {
+      "size_bytes": 732,
+      "lines": 41,
+      "last_modified": "2025-06-24T12:22:54.399010"
+    },
+    "src/mediasoup/interface/user-resources.interfaces.ts": {
+      "size_bytes": 793,
+      "lines": 31,
+      "last_modified": "2025-06-24T12:22:54.399984"
+    },
+    "src/mediasoup/media.config.ts": {
+      "size_bytes": 739,
+      "lines": 33,
+      "last_modified": "2025-06-24T12:22:54.399984"
+    },
+    "src/mediasoup/mediasoup.module.ts": {
+      "size_bytes": 564,
+      "lines": 17,
+      "last_modified": "2025-06-24T12:22:54.400986"
+    },
+    "src/mediasoup/mediasoup.service.ts": {
+      "size_bytes": 1151,
+      "lines": 43,
+      "last_modified": "2025-06-24T12:22:54.400986"
+    },
+    "src/mediasoup/producer-consumer/producer-consumer.interface.ts": {
+      "size_bytes": 594,
+      "lines": 31,
+      "last_modified": "2025-06-24T12:22:54.402312"
+    },
+    "src/mediasoup/producer-consumer/producer-consumer.module.ts": {
+      "size_bytes": 328,
+      "lines": 10,
+      "last_modified": "2025-06-24T12:22:54.402312"
+    },
+    "src/mediasoup/producer-consumer/producer-consumer.service.ts": {
+      "size_bytes": 7359,
+      "lines": 221,
+      "last_modified": "2025-06-24T12:22:54.402986"
+    },
+    "src/mediasoup/room/peer.interface.ts": {
+      "size_bytes": 265,
+      "lines": 12,
+      "last_modified": "2025-06-24T12:22:54.403984"
+    },
+    "src/mediasoup/room/room.interface.ts": {
+      "size_bytes": 660,
+      "lines": 25,
+      "last_modified": "2025-06-24T12:22:54.403984"
+    },
+    "src/mediasoup/room/room.module.ts": {
+      "size_bytes": 307,
+      "lines": 10,
+      "last_modified": "2025-06-24T12:22:54.405051"
+    },
+    "src/mediasoup/room/room.service.ts": {
+      "size_bytes": 1797,
+      "lines": 61,
+      "last_modified": "2025-06-24T12:22:54.405986"
+    },
+    "src/mediasoup/transport/transport.interface.ts": {
+      "size_bytes": 314,
+      "lines": 14,
+      "last_modified": "2025-06-24T12:22:54.406990"
+    },
+    "src/mediasoup/transport/transport.module.ts": {
+      "size_bytes": 292,
+      "lines": 10,
+      "last_modified": "2025-06-24T12:22:54.406990"
+    },
+    "src/mediasoup/transport/transport.service.ts": {
+      "size_bytes": 1592,
+      "lines": 42,
+      "last_modified": "2025-06-24T12:22:54.406990"
+    },
+    "src/signaling/dto/join-channel.dto.ts": {
+      "size_bytes": 197,
+      "lines": 11,
+      "last_modified": "2025-06-24T12:22:54.407984"
+    },
+    "src/signaling/dto/leave-channel.dts.ts": {
+      "size_bytes": 33,
+      "lines": 1,
+      "last_modified": "2025-06-24T12:22:54.408984"
+    },
+    "src/signaling/signaling.gateway.spec.ts": {
+      "size_bytes": 499,
+      "lines": 18,
+      "last_modified": "2025-06-24T12:22:54.408984"
+    },
+    "src/signaling/signaling.gateway.ts": {
+      "size_bytes": 10012,
+      "lines": 325,
+      "last_modified": "2025-06-24T12:25:23.680877"
+    },
+    "src/signaling/signaling.module.ts": {
+      "size_bytes": 280,
+      "lines": 9,
+      "last_modified": "2025-06-24T12:22:54.409987"
+    },
+    "test/app.e2e-spec.ts": {
+      "size_bytes": 654,
+      "lines": 24,
+      "last_modified": "2025-06-24T12:22:54.410986"
+    },
+    "test/jest-e2e.json": {
+      "size_bytes": 192,
+      "lines": 9,
+      "last_modified": "2025-06-24T12:22:54.411986"
+    },
+    "tsconfig.build.json": {
+      "size_bytes": 101,
+      "lines": 4,
+      "last_modified": "2025-06-24T12:22:54.411986"
+    },
+    "tsconfig.json": {
+      "size_bytes": 567,
+      "lines": 21,
+      "last_modified": "2025-06-24T12:22:54.412986"
+    }
+  },
+  "import_graph": {},
+  "tests": [
+    "src/app.controller.spec.ts",
+    "src/signaling/signaling.gateway.spec.ts"
+  ],
+  "coverage": null
+}
